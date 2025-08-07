@@ -1,0 +1,38 @@
+<!-- components/CustomButton.vue -->
+<template>
+  <button
+    class="btn01 black custom"
+    :disabled="disabled"
+    @click="$emit('click')"
+  >
+    <slot />
+  </button>
+</template>
+
+<script setup>
+
+defineProps({
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
+})
+
+defineEmits(['click'])
+
+</script>
+
+<style scoped>
+
+.custom {
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.custom:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+  border: 1px solid #aaa;
+}
+
+
+</style>

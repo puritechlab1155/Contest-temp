@@ -1,0 +1,284 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/woff2/Pretendard-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+ 
+@font-face {
+  font-family: 'GangwonEdu_OTFBoldA'; /* bold체 한가지만 사용가능 */
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NotoSerifKR';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NotoSerifKR.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #222222;
+  font-family: 'GangwonEdu_OTFBoldA';
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+body {
+  background: #FEFEFE;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+a:focus {
+  outline: none;
+}
+button {
+  cursor: pointer;
+  border: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+@supports (-webkit-appearance:none) {
+input {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+display: none;
+}
+
+input::-webkit-contacts-auto-fill-button {
+visibility: hidden !important;
+display: none !important;
+pointer-events: none !important;
+position: absolute !important;
+right: 0 !important;
+}
+
+input::-webkit-credentials-auto-fill-button {
+visibility: hidden !important;
+display: none !important;
+pointer-events: none !important;
+position: absolute !important;
+right: 0 !important;
+}
+select {
+  appearance: none;
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+
+.color-picker::-webkit-color-swatch-wrapper {
+padding: 0;
+}
+
+.color-picker::-webkit-color-swatch {
+border: 2px solid #eee;
+border-radius: 50%;
+}
+
+.number-input::-webkit-outer-spin-button,
+.number-input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+
+img, input, select, textarea, button, label {
+  vertical-align: middle;
+}
+img, fieldset, abbr {
+  border: 0;
+}
+/* 공통 버튼 스타일 */
+.btn-wrap {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 50px;
+  position: sticky;
+  bottom: 0 !important;
+}
+.btn01.black.custom:not(:disabled):hover::before {
+  /* background-color: #FEFEFE; */
+}
+@media (max-width: 768px) {
+
+  .btn-wrap {
+     padding-bottom: 0;
+   }
+  .btn01.black.custom {
+    width: 100vw;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .btn01.black.custom:not(:disabled):hover::before {
+    width: 100%;
+    height: 700px;  
+  }
+}
+.btn01 {
+  position: relative;
+  font-size: 18px;
+  cursor: pointer;
+  border: 1px solid #222;
+  background-color: #FEFEFE;
+  transition: background 0.1s ease;
+  overflow: hidden;
+}
+.btn01::before {
+  content: '';
+  position: absolute;
+  top: var(--y, 50%);
+  left: var(--x, 50%);
+  width: 0;
+  height: 0;
+  background: #222;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition:
+  width 0.5s ease,
+  height 0.5s ease,
+  top 0s,
+  left 0s;
+transition-delay: 0.05s; /* 배경 확장 약간 늦게 */
+
+  /* z-index: 1; */
+  pointer-events: none;
+}
+.btn01:not(:disabled):hover::before {
+  width: 300px;
+  height: 300px;
+}
+.btn01 span {
+  padding: 10px 30px; /* 스타일 유지 위해 span padding으로 조절 */
+  display: block;
+  transition: color 0.3s ease;
+
+  position: relative;
+  /* z-index: 2; */
+}
+.btn01.black.custom span {
+  padding: 10px 40px; /* 스타일 유지 위해 span padding으로 조절 */
+  color: #FEFEFE;
+}
+.btn01 span, .btn01 {
+  position: relative;
+}
+.btn01 span:not(:disabled):hover, .btn01:not(:disabled):hover {
+  color: #FEFEFE;
+}
+
+/* 2 */
+.btn01.black {
+  background-color: #222;
+  border: 1px solid #222;
+}
+.btn01.black span {
+  color: #FEFEFE;
+}
+.btn01.black::before {
+  background: #FEFEFE;
+}
+.btn01.black span:not(:disabled):hover, .btn01.black:not(:disabled):hover {
+  color: #222;
+}
+
+/* 3 */
+
+.btn01.white {
+  background-color: #FEFEFE;
+  border: 1px solid #D9D9D9;
+}
+.btn01.white::before {
+  background: #EFEFEF;
+}
+.btn01.white span:not(:disabled):hover, .btn01.white:not(:disabled):hover {
+  color: #222;
+}
+
+.btn01.red {
+  background-color: #B31C45;
+  border: 1px solid #B31C45;
+}
+.btn01.red span {
+  color: #FEFEFE;
+}
+.btn01.red::before {
+  background: #FEFEFE;
+}
+.btn01.red span:not(:disabled):hover, .btn01.red:not(:disabled):hover {
+  color: #B31C45;
+}
+
+
+.mt-10 {
+  margin-top: 10px;
+}
+.mt-16 {
+  margin-top: 16px;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.mt-30 {
+  margin-top: 30px;
+}
+.mt-50 {
+  margin-top: 50px;
+}
+.f-18 {
+  font-size: 18px;
+}
+.mt-70 {
+  margin-top: 70px;
+}
+br.mob, br.smob {
+  display: none;
+}
+
+/* .bold {
+  font-weight: 600;
+} */
+
