@@ -8,7 +8,7 @@
 
     <!-- 타이틀 배경 -->
     <div class="subTitle-box">        
-      <h1 class="subTitle">모집요강</h1>
+      <h1 class="subTitle">페이지 준비중입니다</h1>
     </div>
 
     <div class="sub-radius">

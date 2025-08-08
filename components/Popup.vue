@@ -3,8 +3,8 @@
     <div class="popup-content">
       <img :src="data.url" alt="팝업 이미지" class="popup-image" />
       <div class="popup-buttons">
-        <button class="black" >닫기</button>
-        <button >하루 동안 보지 않기</button>
+        <button class="black" >페이지 준비중입니다.</button>
+        <!-- <button >하루 동안 보지 않기</button> -->
       </div>
     </div>
   </div>
